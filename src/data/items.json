@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "Video Lecture",
+    "price": 700,
+    "imgUrl": "/public/images/lecture.jpeg" 
+  },
+
+  {
+    "id": 2,
+    "name": "Online Coaching",
+    "price": 1000,
+    "imgUrl": "/public/images/coaching.jpeg"
+  },
+
+  {
+    "id": 3,
+    "name": "Books",
+    "price": 50,
+    "imgUrl": "/public/images/books.jpeg"
+  }
+
+]
