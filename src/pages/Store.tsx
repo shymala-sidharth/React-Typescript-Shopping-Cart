@@ -5,6 +5,7 @@ import { StoreItem } from "../components/StoreItem"
 export function Store() {
   return (
     <>
+    <div className="bg-cyan">
   <h1>Store</h1>
   <Row md={2} xs={1} lg={3} className='g-3'>
     {storeItems.map(item => (
@@ -15,6 +16,7 @@ export function Store() {
     ))}
     
   </Row>
+  </div>
   </>
   )
 
