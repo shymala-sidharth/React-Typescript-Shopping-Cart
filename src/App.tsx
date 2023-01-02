@@ -11,6 +11,7 @@ import { ShoppingCartProvider } from "./context/ShoppingCartContext"
 function App()  {
   return(
   <>
+  <div className="bg-warning">
   <ShoppingCartProvider>
   <Navbar/>
    <Container className="mb-4">
@@ -21,6 +22,7 @@ function App()  {
     </Routes>
   </Container>
   </ShoppingCartProvider>
+  </div>
   </>
   )
 }
