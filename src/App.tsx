@@ -11,7 +11,7 @@ import { ShoppingCartProvider } from "./context/ShoppingCartContext"
 function App()  {
   return(
   <>
-  <div className="bg-warning">
+  <div>
   <ShoppingCartProvider>
   <Navbar/>
    <Container className="mb-4">

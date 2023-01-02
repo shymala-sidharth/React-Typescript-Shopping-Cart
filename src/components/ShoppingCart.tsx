@@ -26,7 +26,7 @@ export function ShoppingCart({isOpen}: ShoppingCartProps) {
         )}
         </div>
       </Stack>
-      <Button size='lg'>Checkout</Button>
+      <Button className="btn-info" size='lg'>Checkout</Button>
     </Offcanvas.Body>
   </Offcanvas>
 }

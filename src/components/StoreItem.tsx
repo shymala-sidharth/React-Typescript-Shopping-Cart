@@ -25,14 +25,14 @@ return (
   </Card.Title>
   <div className="mt-auto">
     {quantity=== 0? (
-      <Button className="w-100" onClick={() => increaseCartQuantity(id)}> + Add to Cart</Button>
+      <Button className="w-100 btn-info" onClick={() => increaseCartQuantity(id)}> Add to Cart</Button>
     ) : <div className="d-flex align-items-center flex-column" style={{gap: '.5 rem'}}> 
     <div className="d-flex align-items-center justify-content-center" style={{gap: '.5 rem'}}>
-    <Button onClick={() => decreaseCartQuantity(id)}>-</Button>
+    
     <div>
-    <span className='fs-3'>{quantity}</span> In Cart
+    <span className='fs-3'></span> In Cart
     </div>
-    <Button onClick={() => increaseCartQuantity(id)}>+</Button>
+    
     </div>
     <Button variant='danger' size='sm' onClick={() => removeFromCart(id)}>Remove</Button>
   </div>}
