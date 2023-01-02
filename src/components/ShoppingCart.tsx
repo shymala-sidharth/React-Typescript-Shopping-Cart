@@ -3,6 +3,7 @@ import { useShoppingCart } from "../context/ShoppingCartContext";
 import { formatCurrency } from "../utilites/formateCurrency";
 import { CartItem } from "./CartItem";
 import items from '../data/items.json'
+import { useNavigate } from "react-router-dom";
 
 
 type ShoppingCartProps = {
@@ -11,6 +12,14 @@ type ShoppingCartProps = {
 
 export function ShoppingCart({isOpen}: ShoppingCartProps) {
   const {closeCart, cartItems} = useShoppingCart()
+
+  const navigate = useNavigate()
+  
+  function routeChange() {
+    const path = `/src/components/Checkout.tsx`
+    navigate(path)
+
+  }
  
   return <Offcanvas show={isOpen} onHide={closeCart} placement="end">
     <Offcanvas.Header closeButton>
@@ -26,7 +35,7 @@ export function ShoppingCart({isOpen}: ShoppingCartProps) {
         )}
         </div>
       </Stack>
-      <Button className="btn-info" size='lg'>Checkout</Button>
+      <Button className="btn-info" size='lg' onClick={() => routeChange()}>Checkout</Button>
     </Offcanvas.Body>
   </Offcanvas>
 }
