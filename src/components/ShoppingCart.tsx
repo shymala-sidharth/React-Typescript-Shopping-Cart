@@ -16,7 +16,7 @@ export function ShoppingCart({isOpen}: ShoppingCartProps) {
   const navigate = useNavigate()
   
   function routeChange() {
-    const path = `/src/components/Checkout.tsx`
+    const path = `/checkout`
     navigate(path)
 
   }
