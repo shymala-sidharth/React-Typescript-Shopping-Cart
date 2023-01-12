@@ -3,18 +3,27 @@ import { Container } from "react-bootstrap"
 import { Home } from "./pages/Home"
 import { Store } from "./pages/Store"
 import { About } from "./pages/About"
-import { Navbar } from "./components/Navbar"
 import { ShoppingCartProvider } from "./context/ShoppingCartContext"
 import { Checkout } from "./pages/Checkout"
-
+import Navbar from "./components/Navbar"
+import { useAuth0 } from "@auth0/auth0-react"
+import ProtectedRoute from "./auth/ProtectedRoute"
 
 
 function App()  {
+
+  const {isLoading} = useAuth0
+
+  if (isLoading) {
+    return <div>Loading...</div>
+  }
+
   return(
   <>
   <div>
   <ShoppingCartProvider>
   <Navbar/>
+  
    <Container className="mb-4">
     <Routes>
       <Route path='/' element={<Home/>}/>

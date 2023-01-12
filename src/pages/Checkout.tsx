@@ -3,7 +3,9 @@ import { useShoppingCart } from "../context/ShoppingCartContext";
 
 export function Checkout() {
   
-  const {closeCart} = useShoppingCart()
+ return (
+  <h1>Checkout</h1>
+ )
 
   
   
